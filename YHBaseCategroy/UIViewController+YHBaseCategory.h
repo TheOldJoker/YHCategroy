@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 typedef void (^AlertActionBlock)(NSInteger actionNumber);
+typedef void (^ValueActionBlock)(NSString * resValue);
 @interface UIViewController (YHBaseCategory)
 //系统弹窗
 - (void)showSystemAlertTitle:(NSString *)title message:(NSString *)message actionTitleArray:(NSArray *)actionArray colorTitle:(NSArray *)colorTitleArray withAction:(AlertActionBlock)alertAction preferredStyle:(UIAlertControllerStyle)preferredStyle;
+- (void)showTextFieldAlertWithTextContent:(NSString *)textContent title:(NSString *)title message:(NSString *)message actionTitleArray:(NSArray *)actionArray valueBlock:(ValueActionBlock)valueBlok;
 //打印Json
 - (void)logJsonWithDict:(id)response;
 //jsonString to dic
