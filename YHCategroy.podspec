@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "YHCategroy"
-  s.version      = "v0.0.3"
+  s.version      = "0.0.3"
   s.summary      = "iOS 项目中常用基础类别扩展"
 
   # This description is used to generate tags and improve search results.
