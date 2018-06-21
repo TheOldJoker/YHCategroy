@@ -7,7 +7,6 @@
 //
 
 #import "UIViewController+YHViewControllerCategroy.h"
-#import "MBProgressHUD.h"
 #if TARGET_IPHONE_SIMULATOR
 #import <objc/runtime.h>
 #else
@@ -60,27 +59,27 @@
     vc.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:vc animated:YES completion:nil];
 }
-- (void)showWeakAlertString:(NSString *)string {
-    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    [hud hideAnimated:YES afterDelay:1];
-    if (stringIsEmpty(string)) {
-        hud.label.text = @"error...";
-        return;
-    }
-    hud.label.text = string;
-}
-- (void)showHUDWithString:(NSString *)string {
-     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    if (stringIsEmpty(string)) {
-        hud.label.text = @"loading...";
-        return;
-    }
-    hud.label.text = string;
-}
-- (void)hiddenHUD {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
+//- (void)showWeakAlertString:(NSString *)string {
+//    MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.mode = MBProgressHUDModeText;
+//    [hud hideAnimated:YES afterDelay:1];
+//    if (stringIsEmpty(string)) {
+//        hud.label.text = @"error...";
+//        return;
+//    }
+//    hud.label.text = string;
+//}
+//- (void)showHUDWithString:(NSString *)string {
+//     MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    if (stringIsEmpty(string)) {
+//        hud.label.text = @"loading...";
+//        return;
+//    }
+//    hud.label.text = string;
+//}
+//- (void)hiddenHUD {
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//}
 - (void)logJsonWithDict:(id)response
 {
     if (response == nil) {

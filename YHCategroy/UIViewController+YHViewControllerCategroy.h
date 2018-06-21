@@ -14,12 +14,12 @@ typedef void (^AlertActionBlock)(NSInteger actionNumber);
 - (void)showSystemAlertTitle:(NSString *)title message:(NSString *)message actionTitleArray:(NSArray *)actionArray colorTitle:(NSArray *)colorTitleArray withAction:(AlertActionBlock)alertAction preferredStyle:(UIAlertControllerStyle)preferredStyle;
 //自定义视图
 - (void)customPresentVC:(UIViewController *)vc animation:(YHModaAnimationType)animation showBlackBackgroud:(BOOL)showBlackBackgroud canTapDismiss:(BOOL)canTapDismiss;
-//弱提示
-- (void)showWeakAlertString:(NSString *)string;
-//loadingHUD
-- (void)showHUDWithString:(NSString *)string;
-//hiddenHUD
-- (void)hiddenHUD;
+////弱提示
+//- (void)showWeakAlertString:(NSString *)string;
+////loadingHUD
+//- (void)showHUDWithString:(NSString *)string;
+////hiddenHUD
+//- (void)hiddenHUD;
 //打印Json
 - (void)logJsonWithDict:(id)response;
 //jsonString to dic
