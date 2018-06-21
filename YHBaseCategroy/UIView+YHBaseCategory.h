@@ -1,14 +1,14 @@
 //
-//  UIView+YHFrame.h
-//  YHSeesaw
+//  UIView+YHBaseCategory.h
+//  TempDemo
 //
-//  Created by 赵一欢 on 2016/12/23.
-//  Copyright © 2016年 zhaoyihuan. All rights reserved.
+//  Created by 赵一欢 on 2018/6/21.
+//  Copyright © 2018年 zhaoyihuan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (YHFrame)
+@interface UIView (YHBaseCategory)
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat right;
 @property (nonatomic, assign) CGFloat centerX;
@@ -22,4 +22,6 @@
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
 - (NSString *)frameDescription;
+- (UIViewController *)viewController;
+- (void)setCornerRadius:(float)cornerRadius borderWidth:(float)borderWidth borderColor:(UIColor *)borderColor;
 @end

@@ -1,14 +1,14 @@
 //
-//  UIView+YHFrame.m
-//  YHSeesaw
+//  UIView+YHBaseCategory.m
+//  TempDemo
 //
-//  Created by 赵一欢 on 2016/12/23.
-//  Copyright © 2016年 zhaoyihuan. All rights reserved.
+//  Created by 赵一欢 on 2018/6/21.
+//  Copyright © 2018年 zhaoyihuan. All rights reserved.
 //
 
-#import "UIView+YHFrame.h"
+#import "UIView+YHBaseCategory.h"
 
-@implementation UIView (YHFrame)
+@implementation UIView (YHBaseCategory)
 - (void)setLeft:(CGFloat)left
 {
     [self setX:left];
@@ -58,7 +58,7 @@
 - (CGFloat)bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
-
+    
 - (void)setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
@@ -70,55 +70,55 @@
     frame.origin.x = x;
     self.frame = frame;
 }
-
+    
 - (CGFloat)x
 {
     return self.frame.origin.x;
 }
-
+    
 - (void)setY:(CGFloat)y
 {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
 }
-
+    
 - (CGFloat)y
 {
     return self.frame.origin.y;
 }
-
+    
 - (void)setWidth:(CGFloat)width
 {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
 }
-
+    
 - (CGFloat)width
 {
     return self.frame.size.width;
 }
-
+    
 - (void)setHeight:(CGFloat)height
 {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
 }
-
+    
 - (CGFloat)height
 {
     return self.frame.size.height;
 }
-
+    
 - (void)setSize:(CGSize)size
 {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
 }
-
+    
 - (CGSize)size
 {
     return self.frame.size;
@@ -129,7 +129,7 @@
     frame.origin = origin;
     self.frame = frame;
 }
-
+    
 - (CGPoint)origin
 {
     return self.frame.origin;
@@ -137,5 +137,28 @@
 - (NSString *)frameDescription
 {
     return [NSString stringWithFormat:@"(%lf,%lf,%lf,%lf)",self.frame.origin.x,self.frame.origin.y,self.frame.size.width,self.frame.size.height];
+}
+    //获取当前view所在控制器
+- (UIViewController *)viewController{
+    UIViewController *viewController = nil;
+    UIResponder *next = self.nextResponder;
+    while (next)
+    {
+        if ([next isKindOfClass:[UIViewController class]])
+        {
+            viewController = (UIViewController *)next;
+            break;
+        }
+        next = next.nextResponder;
+    }
+    return viewController;
+}
+- (void)setCornerRadius:(float)cornerRadius borderWidth:(float)borderWidth borderColor:(UIColor *)borderColor{
+    self.layer.cornerRadius = cornerRadius;
+    if (borderColor) {
+        self.layer.borderWidth = borderWidth;
+        self.layer.borderColor = borderColor.CGColor;
+    }
+    self.clipsToBounds = YES;
 }
 @end

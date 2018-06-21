@@ -1,14 +1,14 @@
 //
-//  UITableView+YHCategory.m
-//  Rossi
+//  UITableView+YHBaseCategory.m
+//  TempDemo
 //
-//  Created by 赵一欢 on 2018/6/14.
+//  Created by 赵一欢 on 2018/6/21.
 //  Copyright © 2018年 zhaoyihuan. All rights reserved.
 //
 
-#import "UITableView+YHCategory.h"
+#import "UITableView+YHBaseCategory.h"
 
-@implementation UITableView (YHCategory)
+@implementation UITableView (YHBaseCategory)
 - (void)normalConfig {
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;

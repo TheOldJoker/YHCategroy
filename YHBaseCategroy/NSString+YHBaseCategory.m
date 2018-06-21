@@ -1,52 +1,52 @@
 //
-//  NSString+YHConfig.m
-//  YHSeesaw
+//  NSString+YHBaseCategory.m
+//  TempDemo
 //
-//  Created by 赵一欢 on 2016/12/15.
-//  Copyright © 2016年 zhaoyihuan. All rights reserved.
+//  Created by 赵一欢 on 2018/6/21.
+//  Copyright © 2018年 zhaoyihuan. All rights reserved.
 //
 
-#import "NSString+YHConfig.h"
+#import "NSString+YHBaseCategory.h"
 #import <CommonCrypto/CommonDigest.h>
-@implementation NSString (YHConfig)
+@implementation NSString (YHBaseCategory)
 - (NSString *)sha1
-{
-    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
-    uint8_t digest[CC_SHA1_DIGEST_LENGTH];
-    
-    CC_SHA1(data.bytes, (int)data.length, digest);
-    
-    NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
-    
-    for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
     {
-        [output appendFormat:@"%02x", digest[i]];
+        NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+        uint8_t digest[CC_SHA1_DIGEST_LENGTH];
+        
+        CC_SHA1(data.bytes, (int)data.length, digest);
+        
+        NSMutableString *output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
+        
+        for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++)
+        {
+            [output appendFormat:@"%02x", digest[i]];
+        }
+        
+        return output;
     }
     
-    return output;
-}
-
 - (BOOL)isNumber
-{
-    NSString * regex = @"^[0-9]*$";
-    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@" , regex];
-    return [pred evaluateWithObject:self];
-}
+    {
+        NSString * regex = @"^[0-9]*$";
+        NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@" , regex];
+        return [pred evaluateWithObject:self];
+    }
 - (BOOL)isPhoneNumber
-{
-    
-    NSString * regex = @"^[1][3,4,5,6,7,8,9][0-9]{9}$";
-    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@" , regex];
-    
-    return [pred evaluateWithObject:self];
-}
+    {
+        
+        NSString * regex = @"^[1][3,4,5,6,7,8,9][0-9]{9}$";
+        NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@" , regex];
+        
+        return [pred evaluateWithObject:self];
+    }
 - (BOOL)isUserName
-{
-    NSString * regex = @"^[\u4E00-\u9FA5A-Za-z0-9_]+$";
-    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    
-    return [pred evaluateWithObject:self];
-}
+    {
+        NSString * regex = @"^[\u4E00-\u9FA5A-Za-z0-9_]+$";
+        NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+        
+        return [pred evaluateWithObject:self];
+    }
 - (NSMutableDictionary *)getURLParameters {
     
     // 查找参数
