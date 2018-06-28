@@ -17,3 +17,5 @@
 #import "UIColor+YHBaseCategory.h"
 #import "UIButton+YHBaseCategory.h"
 #import "NSFileManager+YHBaseCategory.h"
+#import "CLLocation+Category.h"
+#import "NSArray+YHBaseCategory.h"

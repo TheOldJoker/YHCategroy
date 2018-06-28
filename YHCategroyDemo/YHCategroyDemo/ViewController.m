@@ -24,7 +24,16 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSArray * tempStringNumber = @[@"qweqe",@12,@"24",@"22",@"21",@"25",@"33.5",@123.3,@"33.5"];
+    NSNumber * min = [tempStringNumber min];
+    NSNumber * max = [tempStringNumber max];
+    NSNumber * sum = [tempStringNumber sum];
+    NSNumber * avg = [tempStringNumber avg];
+    NSLog(@"min:%@",min);
+    NSLog(@"max:%@",max);
+    NSLog(@"sum:%@",sum);
+    NSLog(@"avg:%@",avg);
+    NSLog(@"%@",[tempStringNumber distinctUnionOfObjects]);
 }
 
 

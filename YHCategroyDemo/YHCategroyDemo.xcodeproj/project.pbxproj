@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF49A9B120E0E0AC00CDB022 /* CLLocation+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = AF49A9B020E0E0AC00CDB022 /* CLLocation+Category.m */; };
+		AF8D948120E49393002134F6 /* NSArray+YHBaseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D948020E49393002134F6 /* NSArray+YHBaseCategory.m */; };
 		AFA6007720DB7340008519C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6007620DB7340008519C9 /* AppDelegate.m */; };
 		AFA6007A20DB7340008519C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA6007920DB7340008519C9 /* ViewController.m */; };
 		AFA6007D20DB7340008519C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA6007B20DB7340008519C9 /* Main.storyboard */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF49A9AF20E0E0AC00CDB022 /* CLLocation+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Category.h"; sourceTree = "<group>"; };
+		AF49A9B020E0E0AC00CDB022 /* CLLocation+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Category.m"; sourceTree = "<group>"; };
+		AF8D947F20E49393002134F6 /* NSArray+YHBaseCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+YHBaseCategory.h"; sourceTree = "<group>"; };
+		AF8D948020E49393002134F6 /* NSArray+YHBaseCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YHBaseCategory.m"; sourceTree = "<group>"; };
 		AFA6007220DB7340008519C9 /* YHCategroyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHCategroyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA6007520DB7340008519C9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFA6007620DB7340008519C9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -170,12 +176,16 @@
 		AFA600CA20DB967D008519C9 /* YHBaseCategroy */ = {
 			isa = PBXGroup;
 			children = (
+				AF49A9AF20E0E0AC00CDB022 /* CLLocation+Category.h */,
+				AF49A9B020E0E0AC00CDB022 /* CLLocation+Category.m */,
 				AFA600CB20DB967D008519C9 /* UIColor+YHBaseCategory.m */,
 				AFA600CC20DB967D008519C9 /* UILabel+YHBaseCategory.h */,
 				AFA600CD20DB967D008519C9 /* NSString+YHBaseCategory.m */,
 				AFA600CE20DB967D008519C9 /* UITextField+YHBaseCategory.h */,
 				AFA600CF20DB967D008519C9 /* UIImageView+YHBaseCategory.m */,
 				AFA600D020DB967D008519C9 /* YHBaseCategroy.h */,
+				AF8D947F20E49393002134F6 /* NSArray+YHBaseCategory.h */,
+				AF8D948020E49393002134F6 /* NSArray+YHBaseCategory.m */,
 				AFA600D120DB967D008519C9 /* UIViewController+YHBaseCategory.m */,
 				AFA600D220DB967D008519C9 /* UIButton+YHBaseCategory.m */,
 				AFA600D320DB967D008519C9 /* NSFileManager+YHBaseCategory.h */,
@@ -328,12 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA600EB20DB967D008519C9 /* UIBarButtonItem+YHBaseCategory.m in Sources */,
+				AF49A9B120E0E0AC00CDB022 /* CLLocation+Category.m in Sources */,
 				AFA600E520DB967D008519C9 /* UIViewController+YHBaseCategory.m in Sources */,
 				AFA600EA20DB967D008519C9 /* UITableView+YHBaseCategory.m in Sources */,
 				AFA600E920DB967D008519C9 /* UITextField+YHBaseCategory.m in Sources */,
 				AFA600E420DB967D008519C9 /* UIImageView+YHBaseCategory.m in Sources */,
 				AFA600E820DB967D008519C9 /* UILabel+YHBaseCategory.m in Sources */,
 				AFA6007A20DB7340008519C9 /* ViewController.m in Sources */,
+				AF8D948120E49393002134F6 /* NSArray+YHBaseCategory.m in Sources */,
 				AFA600E620DB967D008519C9 /* UIButton+YHBaseCategory.m in Sources */,
 				AFA600E220DB967D008519C9 /* UIColor+YHBaseCategory.m in Sources */,
 				AFA600E320DB967D008519C9 /* NSString+YHBaseCategory.m in Sources */,
