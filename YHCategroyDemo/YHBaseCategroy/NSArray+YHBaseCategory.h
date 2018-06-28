@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface NSArray (YHBaseCategory)
-- (NSArray *)uppercaseString;
+- (NSArray *)uppercaseString;//全部大写
+- (NSArray *)lowercaseString;//全部小写
+- (NSArray *)capitalizedString;//首字母大写
 - (NSNumber *)min;
 - (NSNumber *)max;
 - (NSNumber *)sum;

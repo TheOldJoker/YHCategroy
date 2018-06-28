@@ -21,6 +21,31 @@
         return temp;
     }
 }
+
+- (NSArray *)lowercaseString{
+    NSArray * temp = nil;
+    @try {
+        temp = [self valueForKeyPath:@"lowercaseString"];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+    }
+    @finally {
+        return temp;
+    }
+}
+- (NSArray *)capitalizedString{
+    NSArray * temp = nil;
+    @try {
+        temp = [self valueForKeyPath:@"capitalizedString"];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%s\n%@", __FUNCTION__, exception);
+    }
+    @finally {
+        return temp;
+    }
+}
 - (NSNumber *)min{
     NSNumber * min = nil;
     @try {
